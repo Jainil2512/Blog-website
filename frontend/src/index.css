@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.bg-dark-blue {
+    background-color: #001f3f; 
+  }
