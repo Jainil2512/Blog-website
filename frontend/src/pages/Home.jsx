@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/posts');
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/posts`);
         setPosts(response.data);
         setLoading(false);
       } catch (error) {
@@ -26,7 +26,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/posts/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/posts/${id}`);
       setPosts(posts.filter(post => post._id !== id));
     } catch (error) {
       console.error('Error deleting post:', error);
