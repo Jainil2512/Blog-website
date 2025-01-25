@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Comment from '../components/comment';
-import Loader from '../components/loader';
+import Loader from '../components/Loader';
 
 const PostDetails = () => {
   const { id } = useParams();

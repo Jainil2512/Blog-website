@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import HomePost from '../components/homepost';
-import Loader from '../components/loader';
+import HomePost from '../components/HomePost';
+import Loader from '../components/Loader';
 import { useNavigate } from 'react-router-dom';
 
 const MyBlog = () => {
