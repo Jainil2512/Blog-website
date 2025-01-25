@@ -12,7 +12,7 @@ const PostDetails = () => {
   useEffect(() => {
     const fetchPostDetails = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/posts/${id}`);
+        const response = await axios.get(`https://blog-website-be-9kiw.onrender.com/api/posts/${id}`);
         setPost(response.data);
         setLoading(false);
       } catch (error) {

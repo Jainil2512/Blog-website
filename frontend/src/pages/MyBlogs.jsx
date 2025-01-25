@@ -13,7 +13,7 @@ const MyBlog = () => {
   useEffect(() => {
     const fetchMyPosts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/posts?author=myusername`);
+        const response = await axios.get(`https://blog-website-be-9kiw.onrender.com/api/posts?author=myusername`);
         setPosts(response.data);
         setLoading(false);
       } catch (error) {

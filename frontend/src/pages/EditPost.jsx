@@ -12,7 +12,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/posts/${id}`);
+        const response = await axios.get(`https://blog-website-be-9kiw.onrender.com/api/posts/${id}`);
         setTitle(response.data.title);
         setContent(response.data.content);
         setTags(response.data.tags.join(','));
@@ -27,7 +27,7 @@ const EditPost = () => {
     e.preventDefault();
     try {
       const updatedPost = { title, content, tags: tags.split(',') };
-      await axios.put(`${process.env.REACT_APP_BASE_URL}/api/posts/${id}`, updatedPost);
+      await axios.put(`https://blog-website-be-9kiw.onrender.com/api/posts/${id}`, updatedPost);
       navigate(`/posts/${id}`);
       // Handle success 
     } catch (error) {

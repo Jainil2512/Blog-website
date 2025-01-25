@@ -13,7 +13,7 @@ const CreatePost = () => {
     e.preventDefault();
     try {
       const newPost = { title, content, tags: tags.split(',') };
-      await axios.post(`${process.env.REACT_APP_BASE_URL}/api/posts`, newPost);
+      await axios.post(`https://blog-website-be-9kiw.onrender.com/api/posts`, newPost);
       setTitle('');
       setContent('');
       setTags('');
